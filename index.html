@@ -9,32 +9,32 @@
     <title>Lista de tarefas</title>
   </head>
   <body>
+    <h1>Lista de tarefas</h1>
     <!--BOTAO SAIR DO PROGRAMA-->
     <div class="sair">
-      <button class="botoes" id="btn-sair">Sair do programa</button>
+      <button id="btn-sair">Sair do programa</button>
     </div>
     <!--BLOCO PRINCIPAL-->
     <div class="bloco-principal">
-        <label class="labels" for="bloco-principal">Lista de tarefas</label>
       <!--ELEMENTOS DA PARTE DAS TAREFAS-->
       <div class="elementos">
-        <fieldset class="tela-tarefa">
+        <div class="tela-tarefa">
+        <fieldset id="pagina-tarefa">
           <legend id="legenda">Tarefas armazenadas</legend>
         </fieldset>
-        <label class="labels">Adicionar nova tarefa:</label>
-        <input type="text" name="add-tarefa" placeholder="Digite a nova tarefa..." />
+        </div>
+        <br>
+        <input id="campo-add" type="text" name="add-tarefa" placeholder="Digite a nova tarefa..." />
         <button class="botoes" id="btn-adicionar">Adicionar</button>
       </div>
       <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
       <div class="interagir">
-        <label class="labels" for="interagir">Interações com as tarefas</label><br />
         <button class="botoes" id="btn-alt-tarefa">Alterar tarefa</button>
         <button class="botoes" id="btn-del-tarefa">Deletar tarefa</button>
         <button class="botoes" id="btn-lst-tarefa">Listar tarefas</button>
       </div>
       <!--BOTÕES PARA MANIPULAR A PÁGINA-->
       <div class="manipular">
-        <label class="labels" for="manipular">Interações com a página</label><br />
         <button class="botoes" id="btn-tema">Tema escuro</button>
         <button class="botoes" id="btn-alt-icone">Alterar o icone da lista</button>
       </div>
