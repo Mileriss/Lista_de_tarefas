@@ -1,56 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Lista de tarefas</title>
-</head>
-<body>
-    <!--OPÇÕES DE MANIPULAÇÃO DA PÁGINA-->
-    <div class="bloco-opcoes gd-opcoes">
-        <div class="opc-sair">
-            <button class="botoes" id="btn-sair">Sair do programa</button>
-        </div>
-        <div class="opc-tema">
-            <button class="botoes" id="btn-tema">Tema escuro</button>
-        </div>
-        <div class="alt-icone-lista">
-            <button class="botoes" id="btn-alt-icone">Alterar o icone da lista</button>
-        </div>
+  </head>
+  <body>
+    <!--BOTAO SAIR DO PROGRAMA-->
+    <div class="sair">
+      <button class="botoes" id="btn-sair">Sair do programa</button>
     </div>
-    <!--ELEMENTOS DA PARTE DAS TAREFAS-->
-    <div class="bloco-elementos gd-elementos">
-        <div class="tela-resultado">
-            <div class="tarefa">
-                <fieldset id="tarefas">
-                    <legend>Tarefas</legend>
-                </fieldset>
-            </div>
-            <div class="elementos-tarefa">
-                <label class="labels">Adicionar nova tarefa:</label>
-                <input type="text" name="add-tarefa" placeholder="Digite a nova tarefa...">
-                <button class="botoes" id="btn-adicionar">Adicionar</button>
-            </div>
-        </div>
+    <!--BLOCO PRINCIPAL-->
+    <div class="bloco-principal">
+        <label class="labels" for="bloco-principal">Lista de tarefas</label>
+      <!--ELEMENTOS DA PARTE DAS TAREFAS-->
+      <div class="elementos">
+        <fieldset class="tela-tarefa">
+          <legend id="legenda">Tarefas armazenadas</legend>
+        </fieldset>
+        <label class="labels">Adicionar nova tarefa:</label>
+        <input type="text" name="add-tarefa" placeholder="Digite a nova tarefa..." />
+        <button class="botoes" id="btn-adicionar">Adicionar</button>
+      </div>
+      <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
+      <div class="interagir">
+        <label class="labels" for="interagir">Interações com as tarefas</label><br />
+        <button class="botoes" id="btn-alt-tarefa">Alterar tarefa</button>
+        <button class="botoes" id="btn-del-tarefa">Deletar tarefa</button>
+        <button class="botoes" id="btn-lst-tarefa">Listar tarefas</button>
+      </div>
+      <!--BOTÕES PARA MANIPULAR A PÁGINA-->
+      <div class="manipular">
+        <label class="labels" for="manipular">Interações com a página</label><br />
+        <button class="botoes" id="btn-tema">Tema escuro</button>
+        <button class="botoes" id="btn-alt-icone">Alterar o icone da lista</button>
+      </div>
     </div>
-    <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
-    <div class="bloco-manipulacao gd-manipulacao">
-        <div class="alterar-tarefa">
-            <button class="botoes" id="btn-alt-tarefa">Alterar tarefa</button>
-        </div>
-        <div id="deletar-tarefa">
-            <button class="botoes" id="btn-del-tarefa">Deletar tarefa</button>
-        </div>
-        <div class="listar-tarefa">
-            <button class="botoes" id="btn-lst-tarefa">Listar tarefas</button>
-        </div>
-    </div>
-    
 
     <!--JAVASCRIPT-->
     <script type="text/javascript" src="./script.js"></script>
-</body>
+  </body>
 </html>
