@@ -9,15 +9,43 @@
     <title>Lista de tarefas</title>
 </head>
 <body>
-    <div class="bloco-opcoes">
-        <div class="opc-sair gd-opcoes">
-            <button class="btn-sair">Sair do programa</button>
+    <!--OPÇÕES DE MANIPULAÇÃO DA PÁGINA-->
+    <div class="bloco-opcoes gd-opcoes">
+        <div class="opc-sair">
+            <button class="botoes" id="btn-sair">Sair do programa</button>
         </div>
-        <div class="opc-tema gd-opcoes">
-            <button class="btn-tema">Tema escuro</button>
+        <div class="opc-tema">
+            <button class="botoes" id="btn-tema">Tema escuro</button>
         </div>
-        <div class="alt-icone-lista gd-opcoes">
-            <button class="btn-alt-icone">Alterar o icone da lista</button>
+        <div class="alt-icone-lista">
+            <button class="botoes" id="btn-alt-icone">Alterar o icone da lista</button>
+        </div>
+    </div>
+    <!--ELEMENTOS DA PARTE DAS TAREFAS-->
+    <div class="bloco-elementos gd-elementos">
+        <div class="tela-resultado">
+            <div class="tarefa">
+                <fieldset id="tarefas">
+                    <legend>Tarefas</legend>
+                </fieldset>
+            </div>
+            <div class="elementos-tarefa">
+                <label class="labels">Adicionar nova tarefa:</label>
+                <input type="text" name="add-tarefa" placeholder="Digite a nova tarefa...">
+                <button class="botoes" id="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+    </div>
+    <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
+    <div class="bloco-manipulacao gd-manipulacao">
+        <div class="alterar-tarefa">
+            <button class="botoes" id="btn-alt-tarefa">Alterar tarefa</button>
+        </div>
+        <div id="deletar-tarefa">
+            <button class="botoes" id="btn-del-tarefa">Deletar tarefa</button>
+        </div>
+        <div class="listar-tarefa">
+            <button class="botoes" id="btn-lst-tarefa">Listar tarefas</button>
         </div>
     </div>
     
