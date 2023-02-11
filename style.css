@@ -1,0 +1,104 @@
+body{
+    background-image: linear-gradient(to right, lightgrey, grey, lightgrey);
+}
+
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* BOTÃO PARA SAIR DO PROGRAMA */
+.sair{
+    padding: 5px;
+}
+#btn-sair{
+    cursor: pointer;
+}
+
+/* BLOCO PRINCIPAL */
+.bloco-principal{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    border: 10px;
+    border-left: 5px blue;
+    border-top: 5px blue;
+    border-right: 5px lightskyblue;
+    border-bottom: 5px lightskyblue;
+    border-style:outset;
+    border-radius: 5px;
+    /* color: wheat; */
+    background-image: linear-gradient(to right, lightskyblue,darkblue, lightskyblue);
+    align-items: center;
+}
+
+/* LEGENDA FIELDSET */
+#legenda{
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    font-style: italic;
+    font-weight: BOLD;
+}
+/* FIELDSET */
+#pagina-tarefa{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* ELEMENTOS DO CAMPO TAREFA */
+.elementos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#campo-add{
+    height: 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#campo-add:hover{
+    background-color: gainsboro;
+}
+
+/* BOTÕES PARA INTERAGIR COM AS TAREFAS */
+.interagir{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* BOTÕES DE MANIPULAÇÃO DA PÁGINA */
+.manipular{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* FORMATAÇÃO DOS BOTÕES */
+.botoes{
+    border-radius: 5px;
+    border: 1px solid blue;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+.botoes:hover{
+    transition: 0.1s;
+    border: 1px solid white;
+    box-shadow: 0 0 5px 1px white;
+}
+#btn-tema:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 5px 2px black;
+}
+
+/* LEGENDA DAS FUNCIONALIDADES */
+.labels{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
