@@ -12,5 +12,13 @@ btn_adicionar.addEventListener("click", ()=>{
     }else{
         tela_tarefa.appendChild(novo_elemento)
     }
+})
 
+
+//* ALTERAR O TEMA
+let btn_tema = document.getElementById("btn-tema")
+let bloco_principal = document.getElementById("principal")
+
+btn_tema.addEventListener("click", ()=>{
+    bloco_principal.classList.toggle("tema-escuro")
 })
