@@ -14,7 +14,6 @@ btn_adicionar.addEventListener("click", ()=>{
     }
 })
 
-
 //* ALTERAR O TEMA
 let btn_tema = document.getElementById("btn-tema")
 let bloco_principal = document.getElementById("principal")
