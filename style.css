@@ -108,6 +108,19 @@ body{
     box-shadow: 0 0 5px 2px black;
 }
 
+/* TEMA ESCURO (DARK) */
+.tema-escuro{
+    border: 10px;
+    border-left: 5px white;
+    border-top: 5px white;
+    border-right: 5px black;
+    border-bottom: 5px black;
+    border-style:outset;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, black,white, black);
+
+}
+
 /* LEGENDA DAS FUNCIONALIDADES */
 .labels{
     font-size: 18px;
