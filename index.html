@@ -9,7 +9,6 @@
     <title>Lista de tarefas</title>
   </head>
   <body>
-    <h1>Lista de tarefas</h1>
     <!--BOTAO SAIR DO PROGRAMA-->
     <div class="sair">
       <button id="btn-sair">Sair do programa</button>
@@ -19,23 +18,18 @@
       <!--ELEMENTOS DA PARTE DAS TAREFAS-->
       <div class="elementos">
         <div class="tela-tarefa">
-        <fieldset id="pagina-tarefa">
-            <ol>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
-            </ol>
-          <legend id="legenda">Tarefas armazenadas</legend>
-        </fieldset>
+          <form id="form-tarefas">
+          <ol id="lista">
+            <li class="tarefas">Teste</li>
+            <li class="tarefas">Teste</li>
+            <li class="tarefas">Teste</li>
+            <li class="tarefas">Teste</li>
+          </ol>
         </div>
         <br>
-        <input id="campo-add" type="text" name="add-tarefa" placeholder="Digite a nova tarefa..." />
-        <button class="botoes" id="btn-adicionar">Adicionar</button>
+        <input id="campo-add" type="text" name="add-tarefa" placeholder="Digite a nova tarefa..." /><br>
+        <button class="botoes" id="btn-add" type="reset">Adicionar</button>
+      </form>
       </div>
       <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
       <div class="interagir">
