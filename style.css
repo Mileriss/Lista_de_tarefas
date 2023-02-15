@@ -2,14 +2,6 @@ body{
     background-image: linear-gradient(to right, lightgrey, grey, lightgrey);
 }
 
-/* BOTÃO PARA SAIR DO PROGRAMA */
-.sair{
-    padding: 5px;
-}
-#btn-sair{
-    cursor: pointer;
-}
-
 /* BLOCO PRINCIPAL */
 .bloco-principal{
     display: flex;
@@ -26,23 +18,15 @@ body{
     align-items: center;
 }
 
-/* LEGENDA FIELDSET */
-#legenda{
-    text-align: center;
-    color: white;
-    background-color: black;
-    border-radius: 20px;
-    font-style: italic;
-    font-weight: BOLD;
-}
 /* CAMPOS E ELEMENTOS TAREFA */
 .tela-tarefa{
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     border: 2px solid black;
-    width: 50em;
-    height: 15em;
+    width: auto;
+    max-width: 30em;
+    height: 18em;
     overflow: scroll;
 }
 .tarefas{
@@ -60,6 +44,8 @@ body{
 }
 #campo-add{
     height: 35px;
+    width: 15em;
+    align-self: center;
     border-radius: 10px;
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -67,10 +53,12 @@ body{
 #campo-add:hover{
     background-color: gainsboro;
 }
+
 #btn-add{
     height: auto;
     width: 5.5em;
-    font-size: 25px;
+    font-size: 23px;
+    background-color: slategray;
     cursor: pointer;
     align-self: center;
 }
@@ -90,10 +78,10 @@ body{
 /* FORMATAÇÃO DOS BOTÕES */
 .botoes{
     border-radius: 5px;
-    border: 1px solid blue;
+    border: 2px solid black;
     height: auto;
     width: auto;
-    font-size: 25px;
+    font-size: 23px;
     cursor: pointer;
     font-weight: bold;
     background-color: white;
@@ -102,8 +90,8 @@ body{
 }
 .botoes:hover{
     transition: 0.1s;
-    border: 1px solid white;
-    box-shadow: 0 0 5px 1px black;
+    border: 2px solid white;
+    box-shadow: 0 0 5px 2px black;
 }
 #btn-tema{
     background-color: black;
@@ -126,10 +114,10 @@ body{
 }
 .botoes-escuro{
     border-radius: 5px;
-    border: 1px solid white;
+    border: 2px solid white;
     height: auto;
     width: auto;
-    font-size: 25px;
+    font-size: 23px;
     cursor: pointer;
     font-weight: bold;
     background-color: black;
@@ -137,8 +125,8 @@ body{
 }
 .botoes-escuro:hover{
     transition: 0.1s;
-    border: 1px solid white;
-    box-shadow: 0 0 5px 1px white;
+    border: 2px solid white;
+    box-shadow: 0 0 5px 2px white;
 }
 .tela-escuro{
     background-color: black;
@@ -147,6 +135,7 @@ body{
 }
 .botoes-claro{
     background-color: white !important;
+    font-size: 23px !important;
     color: black !important;
     border: 2px solid black !important;
     box-shadow: 0 0 5px 2px white !important;
