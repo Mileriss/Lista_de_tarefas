@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <title>Lista de tarefas</title>
-  </head>
-  <body>
-    <!--BLOCO PRINCIPAL-->
-    <div class="bloco-principal" id="principal">
-      <!--ELEMENTOS DA PARTE DAS TAREFAS-->
-      <div class="elementos">
-        <div class="tela-tarefa" id="tela-escuro">
-          <form id="form-tarefas">
-          <ol id="lista">
-            <li class="tarefas">Teste</li>
-            <li class="tarefas">Teste</li>
-            <li class="tarefas">Teste</li>
-            <li class="tarefas">Teste</li>
-          </ol>
-        </div>
-        <br>
-        <input id="campo-add" type="text" name="add-tarefa" placeholder="Digite a nova tarefa..." /><br>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <title>Lista de tarefas</title>
+</head>
+
+<body>
+  <!--BLOCO PRINCIPAL-->
+  <div id="principal">
+    <!--ELEMENTOS DA PARTE DAS TAREFAS-->
+    <div class="elementos responsivo">
+      <div class="tela-tarefa" id="tela-escuro">
+        <ol id="lista">
+          <li class="tarefas">Teste</li>
+          <li class="tarefas">Teste</li>
+          <li class="tarefas">Teste</li>
+          <li class="tarefas">Teste</li>
+        </ol>
+      </div>
+      <br>
+      <form id="form-add">
+        <input id="campo-add" type="text" name="add-tarefa" placeholder="Digite a nova tarefa...">
         <button class="botoes" id="btn-add" type="reset">Adicionar</button>
       </form>
-      </div>
-      <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
-      <div class="interagir">
-        <button class="botoes" id="btn-alt">Alterar tarefa</button>
-        <button class="botoes" id="btn-del">Deletar tarefa</button>
-        <button class="botoes" id="btn-lst">Listar tarefas A-Z</button>
-      </div>
-      <!--BOTÕES PARA MANIPULAR A PÁGINA-->
-      <div class="manipular">
-        <button class="botoes" id="btn-tema">Alterar tema</button>
-        <button class="botoes" id="btn-alt-icone">Alterar o icone da lista</button>
-      </div>
     </div>
+    <!--BOTÕES PARA INTERAGIR COM AS TAREFAS-->
+    <div class="interagir">
+      <button class="botoes" id="btn-alt">Alterar tarefa</button>
+      <button class="botoes" id="btn-del">Deletar tarefa</button>
+      <button class="botoes" id="btn-lst">Listar tarefas A-Z</button>
+    </div>
+    <!--BOTÕES PARA MANIPULAR A PÁGINA-->
+    <div class="manipular">
+      <button class="botoes" id="btn-tema">Alterar tema</button>
+      <button class="botoes" id="btn-alt-icone">Alterar o icone da lista</button>
+    </div>
+  </div>
+  <a href="https://github.com/Mileriss" target="_blank"><img
+    src="https://github.com/Mileriss/Canva_imagens/blob/main/logo_github.png?raw=true" 
+    id="logotipo"
+    alt="Github: Mileriss"></a>
+  
+  <!--JAVASCRIPT-->
+  <script type="text/javascript" src="./script.js"></script>
+</body>
 
-    <!--JAVASCRIPT-->
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
 </html>
