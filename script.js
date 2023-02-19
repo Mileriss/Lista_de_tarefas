@@ -34,14 +34,14 @@ btn_del.addEventListener("click", ()=>{
 
 //* ALTERAR O TEMA
 let bloco_principal = document.getElementById("principal")
-let tarefas = document.getElementById("tela-escuro")
+let tela_tarefas = document.getElementById("tela-escuro")
 let btn_tema = document.getElementById("btn-tema")
 const lista_btn = [...document.getElementsByClassName("botoes")]
 // const lista_tarefas = [...document.getElementsByClassName("tarefas")]
 
 btn_tema.addEventListener("click", ()=>{
     bloco_principal.classList.toggle("tema-escuro")
-    tarefas.classList.toggle("tela-escuro")
+    tela_tarefas.classList.toggle("tela-escuro")
     btn_tema.classList.toggle("botoes-claro")
     for(btn of lista_btn){
         btn.classList.toggle("botoes-escuro")
