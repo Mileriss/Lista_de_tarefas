@@ -105,6 +105,8 @@ body{
 /* TAREFA SELECIONADA */
 .tar-sel{
     text-shadow: 0px 1px 3px green;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /* TEMA ESCURO (DARK) */
