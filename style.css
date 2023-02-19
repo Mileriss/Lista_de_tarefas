@@ -1,34 +1,55 @@
 body{
-    background-image: linear-gradient(to right, lightgrey, grey, lightgrey);
+    background-color: black;
+    /* background-image: linear-gradient(to right bottom, white, grey, white); */
+}
+
+#logotipo{
+    background-position: top;
+    border-radius: 50%;
+    height: 10em;
 }
 
 /* BLOCO PRINCIPAL */
-.bloco-principal{
+#principal{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    border: 10px;
-    border-left: 5px black;
-    border-top: 5px black;
-    border-right: 5px white;
-    border-bottom: 5px white;
+    border: 10px outset lightslategray;
     border-style:outset;
     border-radius: 5px;
-    background-image: linear-gradient(to right bottom, white,grey, white);
+    background-color: whitesmoke;
+    /* background-image: linear-gradient(to right bottom, white,grey, white); */
     align-items: center;
+    /* margin: 50px; */
 }
 
 /* CAMPOS E ELEMENTOS TAREFA */
+.elementos{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-image: linear-gradient(to top, white, grey, white);
+    padding: 10px;
+}
+
 .tela-tarefa{
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
     border: 2px solid black;
+    border-radius: 4px;
     width: auto;
     max-width: 30em;
     height: 18em;
     overflow: scroll;
 }
+
+#lista{
+    list-style-type:decimal;
+}
+
 .tarefas{
     font-size: 20px;
     margin: 15px;
@@ -36,18 +57,16 @@ body{
     cursor: pointer;
 }
 
-/* ELEMENTOS DO CAMPO TAREFA */
-.elementos{
-    display: flex;
-    flex-flow: column wrap;
-    margin: 20px;
-}
-#campo-add{
-    height: 35px;
-    width: 15em;
+#form-add{
     align-self: center;
-    border-radius: 10px;
-    font-size: 25px;
+}
+
+#campo-add{
+    height: 25px;
+    width: 10em;
+    align-self: center;
+    border-radius: 5px;
+    font-size: 23px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #campo-add:hover{
@@ -55,10 +74,12 @@ body{
 }
 
 #btn-add{
-    height: auto;
-    width: 5.5em;
-    font-size: 23px;
-    background-color: slategray;
+    height: 25px;
+    width: auto;
+    font-size: 18px;
+    text-align: center;
+    padding: auto;
+    background-color: lightslategrey;
     cursor: pointer;
     align-self: center;
 }
@@ -111,14 +132,10 @@ body{
 
 /* TEMA ESCURO (DARK) */
 .tema-escuro{
-    border: 10px;
-    border-left: 5px white;
-    border-top: 5px white;
-    border-right: 5px black;
-    border-bottom: 5px black;
-    border-style:outset;
-    border-radius: 5px;
-    background-image: linear-gradient(to right bottom, black,grey, black);
+    border: 10px outset white !important;
+    border-radius: 5px !important;
+    background-color: black !important;
+    /* background-image: linear-gradient(to bottom, black,grey, black); */
 }
 .botoes-escuro{
     border-radius: 5px;
