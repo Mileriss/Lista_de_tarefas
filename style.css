@@ -100,6 +100,12 @@ body{
     box-shadow: 0 0 5px 2px black;
 }
 
+/* ESTILO UTILIZADO EM CONJUNTO A SCRIPTS (CLIQUES NO BOTÃO) */
+
+/* TAREFA SELECIONADA */
+.tar-sel{
+    text-shadow: 0px 1px 3px green;
+}
 
 /* TEMA ESCURO (DARK) */
 .tema-escuro{
