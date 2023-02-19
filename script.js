@@ -14,6 +14,24 @@ btn_adicionar.addEventListener("click", ()=>{
     }
 })
 
+//! REVISÃO: Necessário corrigir a questão de adicionar a classe ao evento de click para novos elementos
+//* DELETAR TAREFA
+let tarefas_armazenadas = [...document.getElementsByClassName("tarefas")]
+tarefas_armazenadas.map((elemento)=>{
+    elemento.addEventListener("click", (selecionado)=>{
+        const tarefa_sel = selecionado.target
+        tarefa_sel.classList.toggle("tar-sel")
+    })
+})
+let btn_del = document.getElementById("btn-del")
+btn_del.addEventListener("click", ()=>{
+    const tarefa_selecionada = [...document.querySelectorAll(".tar-sel")]
+    tarefa_selecionada.map((tarefas)=>{
+        tela_tarefa.removeChild(tarefas)
+    })
+})
+
+
 //* ALTERAR O TEMA
 let bloco_principal = document.getElementById("principal")
 let tarefas = document.getElementById("tela-escuro")
