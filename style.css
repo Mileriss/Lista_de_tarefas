@@ -125,10 +125,25 @@ body{
 
 /* TAREFA SELECIONADA */
 .tar-sel{
-    text-shadow: 0px 1px 3px green;
     font-size: 22px;
     font-weight: bold;
 }
+
+/* ALTERAR ICONES */
+    .icone1{list-style-type:armenian;}
+    .icone2{list-style-type:circle;}
+    .icone3{list-style-type:decimal;}
+    .icone4{list-style-type:decimal-leading-zero;}
+    .icone5{list-style-type:disc;}
+    .icone6{list-style-type:georgian;}
+    .icone7{list-style-type:lower-alpha;}
+    .icone8{list-style-type:lower-greek;}
+    .icone9{list-style-type:lower-latin;}
+    .icone10{list-style-type:lower-roman;}
+    .icone11{list-style-type:square;}
+    .icone12{list-style-type:upper-alpha;}
+    .icone13{list-style-type:upper-latin;}
+    .icone14{list-style-type:upper-roman;}
 
 /* TEMA ESCURO (DARK) */
 .tema-escuro{
@@ -165,3 +180,4 @@ body{
     border: 2px solid black !important;
     box-shadow: 0 0 5px 2px white !important;
 }
+
