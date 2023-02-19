@@ -16,3 +16,5 @@ Através dessa aplicação o usuário poderá manipular tarefas em uma lista cri
 
 ## Considerações finais  
 Essa aplicação foi criada com o intuito de praticar os conhecimentos obtidos em cursos, provavelmente não poderá ser utilizada no dia a dia porque não terá uma estrutura complexa e nem vinculo com nenhum banco de dados, todas as informações adicionadas vão desaparecer após dar um "refresh" na tela  
+
+## Link para página: <a href="https://htmlpreview.github.io/?https://github.com/Mileriss/Lista_de_tarefas/blob/main/index.html" target="_blank">Lista de Tarefas - CRUD</a>
