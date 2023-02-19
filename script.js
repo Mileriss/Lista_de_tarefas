@@ -5,7 +5,7 @@ const tela_tarefa = document.getElementById("lista")
 
 btn_adicionar.addEventListener("click", ()=>{
     const novo_elemento = document.createElement("li")
-    novo_elemento.setAttribute("class", "tarefas")
+    novo_elemento.setAttribute("class", "tarefas tar-sel")
     novo_elemento.innerHTML = add_tarefa.value
     if(add_tarefa.value == ""){
         alert("O campo não pode ficar vazio!") 
@@ -21,6 +21,7 @@ tarefas_armazenadas.map((elemento)=>{
     elemento.addEventListener("click", (selecionado)=>{
         const tarefa_sel = selecionado.target
         tarefa_sel.classList.toggle("tar-sel")
+
     })
 })
 let btn_del = document.getElementById("btn-del")
