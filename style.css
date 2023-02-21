@@ -24,6 +24,15 @@ body{
 }
 
 /* CAMPOS E ELEMENTOS TAREFA */
+#aviso{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
+    background-image: linear-gradient(to bottom, white, grey);
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+}
+
 .elementos{
     display: flex;
     flex-flow: column wrap;
