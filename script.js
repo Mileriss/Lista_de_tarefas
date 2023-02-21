@@ -28,7 +28,19 @@ btn_adicionar.addEventListener("click", () => {
 })
 
 //* ALTERAR TAREFA
-
+btn_alterar.addEventListener("click", ()=>{
+    let alt_tarefa = ""
+    let sel_tarefa = [...document.getElementsByClassName("tar-sel")]
+    if(sel_tarefa.length == 0){
+        alert("É necessário selecionar uma tarefa primeiro!")
+    }else{
+        alt_tarefa = prompt("Digite aqui a nova tarefa:")
+        sel_tarefa.map((tarefa)=>{
+            tarefa.innerHTML = alt_tarefa
+            tarefa.classList.remove("tar-sel")
+        })
+    }
+})
 
 
 //* DELETAR TAREFA
@@ -46,11 +58,11 @@ btn_deletar.addEventListener("click", () => {
     })
 })
 
+
 //* LISTAR TAREFAS A-Z
 btn_listar.addEventListener("click", () => {
     tarefas_armazenadas.sort()
 })
-
 
 
 //* ALTERAR O TEMA
@@ -68,6 +80,6 @@ btn_tema.addEventListener("click", () => {
 //! REVISÃO: Descobrir uma forma de alterar mais de uma classe por evento (cada classe em um clique)
 btn_icone.addEventListener("click", () => {
     tarefas_armazenadas.map((tarefas) => {
-        tarefas.classList.toggle("icone1")
+        tarefas.classList.toggle("icone6")
     })
 })
