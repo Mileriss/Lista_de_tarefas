@@ -1,13 +1,15 @@
 //* VARIAVEIS UTILIZADAS
+let tela_principal = document.getElementById("principal")
+let tela_tarefa = document.querySelector(".tela-tarefa")
 const lista = document.getElementById("lista")
 const lista_btn = [...document.getElementsByClassName("botoes")]
 const lista_icones = [...document.getElementsByClassName("icones")]
 let campo_add = document.getElementById("campo-add")
-let tarefas_armazenadas = [...document.querySelectorAll(".tarefas")]
-let tela_principal = document.getElementById("principal")
+let tarefas_armazenadas = [...document.getElementsByClassName("tarefas")]
 let tema_lista = document.getElementById("tela-escuro")
 let btn_adicionar = document.getElementById("btn-add")
 let btn_deletar = document.getElementById("btn-del")
+let btn_listar = document.getElementById("btn-lst")
 let btn_tema = document.getElementById("btn-tema")
 let btn_alterar = document.getElementById("btn-alt")
 let btn_icone = document.getElementById("btn-icone")
@@ -21,6 +23,8 @@ btn_adicionar.addEventListener("click", () => {
         alert("O campo não pode ficar vazio!")
     } else {
         lista.appendChild(novo_elemento)
+        tarefas_armazenadas.push(novo_elemento)
+        console.log(tarefas_armazenadas)
     }
 })
 
@@ -36,10 +40,20 @@ tarefas_armazenadas.map((elemento) => {
         tarefa_sel.classList.toggle("tar-sel")
     })
 })
+
 btn_deletar.addEventListener("click", () => {
     const tarefa_selecionada = [...document.querySelectorAll(".tar-sel")]
     tarefa_selecionada.map((tarefas) => {
         lista.removeChild(tarefas)
+    })
+})
+
+//* LISTAR TAREFAS A-Z
+let alfabetico = /^[a-zA-Z]*$/
+btn_listar.addEventListener("click", ()=>{
+    tarefas_armazenadas.map((tarefas)=>{
+        let lista_organizada = [tarefas.innerHTML]
+        lista_organizada.sort()
     })
 })
 
