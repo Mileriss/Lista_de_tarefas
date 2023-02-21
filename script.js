@@ -38,6 +38,9 @@ btn_alterar.addEventListener("click", () => {
         if (alt_tarefa == "") {
             alert("Não é possível deixar o campo vazio!")
             return sel_tarefa
+        } else if (alt_tarefa == null) {
+            alert("Alteração cancelada!")
+            return sel_tarefa
         }
         sel_tarefa.map((tarefa) => {
             tarefa.classList.remove("tar-sel")
@@ -53,7 +56,7 @@ btn_alterar.addEventListener("click", () => {
             }
         })
     } else {
-        alert("Alteração realizada!")
+        alert("ERRO!")
     }
 })
 
