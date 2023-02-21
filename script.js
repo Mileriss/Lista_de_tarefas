@@ -28,25 +28,40 @@ btn_adicionar.addEventListener("click", () => {
 })
 
 //* ALTERAR TAREFA
-btn_alterar.addEventListener("click", ()=>{
+btn_alterar.addEventListener("click", () => {
     let alt_tarefa = ""
     let sel_tarefa = [...document.getElementsByClassName("tar-sel")]
-    if(sel_tarefa.length == 0){
+    if (sel_tarefa.length == 0) {
         alert("É necessário selecionar uma tarefa primeiro!")
-    }else{
+    } else if (sel_tarefa.length > 0) {
         alt_tarefa = prompt("Digite aqui a nova tarefa:")
-        sel_tarefa.map((tarefa)=>{
-            tarefa.innerHTML = alt_tarefa
+        if (alt_tarefa == "") {
+            alert("Não é possível deixar o campo vazio!")
+            return sel_tarefa
+        }
+        sel_tarefa.map((tarefa) => {
             tarefa.classList.remove("tar-sel")
+            let confirmacao = confirm("Tem certeza que deseja realizar a alteração?")
+            if (confirmacao == true) {
+                alert("Alteração realizada!")
+                tarefa.innerHTML = alt_tarefa
+            } else if (confirmacao == false) {
+                alert("Alteração cancelada!")
+                sel_tarefa = sel_tarefa
+            } else if (alt_tarefa == "") {
+                alert("Não é possível deixar o campo vazio!")
+            }
         })
+    } else {
+        alert("Alteração realizada!")
     }
 })
 
 
 //* DELETAR TAREFA
-lista.addEventListener("click", ()=>{
-    tarefas_armazenadas.map((tarefa)=>{
-        tarefa.addEventListener("click", ()=>{
+lista.addEventListener("click", () => {
+    tarefas_armazenadas.map((tarefa) => {
+        tarefa.addEventListener("click", () => {
             tarefa.classList.toggle("tar-sel")
         })
     })
