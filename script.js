@@ -44,11 +44,11 @@ btn_alterar.addEventListener("click", () => {
         }
         sel_tarefa.map((tarefa) => {
             tarefa.classList.remove("tar-sel")
-            let confirmacao = confirm("Tem certeza que deseja realizar a alteração?")
-            if (confirmacao == true) {
+            let conf_alt = confirm("Tem certeza que deseja realizar a alteração?")
+            if (conf_alt == true) {
                 alert("Alteração realizada!")
                 tarefa.innerHTML = alt_tarefa
-            } else if (confirmacao == false) {
+            } else if (conf_alt == false) {
                 alert("Alteração cancelada!")
                 sel_tarefa = sel_tarefa
             } else if (alt_tarefa == "") {
@@ -70,10 +70,21 @@ lista.addEventListener("click", () => {
     })
 })
 btn_deletar.addEventListener("click", () => {
-    const tarefa_selecionada = [...document.querySelectorAll(".tar-sel")]
-    tarefa_selecionada.map((tarefas) => {
-        lista.removeChild(tarefas)
-    })
+    let del_tarefa = [...document.getElementsByClassName("tar-sel")]
+    if (del_tarefa.length == 0) {
+        alert("É necessário selecionar uma tarefa primeiro!")
+    } else if (del_tarefa.length > 0) {
+        const tarefa_selecionada = [...document.querySelectorAll(".tar-sel")]
+        tarefa_selecionada.map((tarefas) => {
+            let conf_del = confirm("Tem certeza que deseja excluir essa tarefa?")
+            if (conf_del == true) {
+                alert("Tarefa excluida com sucesso!")
+                lista.removeChild(tarefas)
+            } else if (conf_del == false) {
+                alert("Exclusão cancelada!")
+            }
+        })
+    }
 })
 
 
