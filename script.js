@@ -1,9 +1,9 @@
 //* VARIAVEIS UTILIZADAS
 let tela_principal = document.getElementById("principal")
 let tela_tarefa = document.querySelector(".tela-tarefa")
-const lista = document.getElementById("lista")
-const lista_btn = [...document.getElementsByClassName("botoes")]
-const lista_icones = [...document.getElementsByClassName("icones")]
+let lista = document.getElementById("lista")
+let lista_btn = [...document.getElementsByClassName("botoes")]
+let lista_icones = [...document.getElementsByClassName("icones")]
 let campo_add = document.getElementById("campo-add")
 let tarefas_armazenadas = [...document.getElementsByClassName("tarefas")]
 let tema_lista = document.getElementById("tela-escuro")
@@ -22,9 +22,8 @@ btn_adicionar.addEventListener("click", () => {
     if (campo_add.value == "") {
         alert("O campo não pode ficar vazio!")
     } else {
-        lista.appendChild(novo_elemento)
         tarefas_armazenadas.push(novo_elemento)
-        console.log(tarefas_armazenadas)
+        lista.appendChild(novo_elemento)
     }
 })
 
@@ -33,14 +32,13 @@ btn_adicionar.addEventListener("click", () => {
 
 
 //* DELETAR TAREFA
-//! REVISÃO: Necessário corrigir a questão de adicionar a classe ao evento de click para novos elementos
-tarefas_armazenadas.map((elemento) => {
-    elemento.addEventListener("click", (selecionado) => {
-        const tarefa_sel = selecionado.target
-        tarefa_sel.classList.toggle("tar-sel")
+lista.addEventListener("click", ()=>{
+    tarefas_armazenadas.map((tarefa)=>{
+        tarefa.addEventListener("click", ()=>{
+            tarefa.classList.toggle("tar-sel")
+        })
     })
 })
-
 btn_deletar.addEventListener("click", () => {
     const tarefa_selecionada = [...document.querySelectorAll(".tar-sel")]
     tarefa_selecionada.map((tarefas) => {
@@ -49,13 +47,10 @@ btn_deletar.addEventListener("click", () => {
 })
 
 //* LISTAR TAREFAS A-Z
-let alfabetico = /^[a-zA-Z]*$/
-btn_listar.addEventListener("click", ()=>{
-    tarefas_armazenadas.map((tarefas)=>{
-        let lista_organizada = [tarefas.innerHTML]
-        lista_organizada.sort()
-    })
+btn_listar.addEventListener("click", () => {
+    tarefas_armazenadas.sort()
 })
+
 
 
 //* ALTERAR O TEMA
