@@ -9,10 +9,11 @@ let tarefas_armazenadas = [...document.getElementsByClassName("tarefas")]
 let tema_lista = document.getElementById("tela-escuro")
 let btn_adicionar = document.getElementById("btn-add")
 let btn_deletar = document.getElementById("btn-del")
-let btn_listar = document.getElementById("btn-lst")
 let btn_tema = document.getElementById("btn-tema")
 let btn_alterar = document.getElementById("btn-alt")
-let btn_icone = document.getElementById("btn-icone")
+let btn_selecionar = document.getElementById("btn-sel")
+let sel_icone = document.getElementById("lst-icone")
+
 
 //* ADICIONAR TAREFAS
 btn_adicionar.addEventListener("click", () => {
@@ -87,12 +88,40 @@ btn_deletar.addEventListener("click", () => {
     }
 })
 
-
-//* LISTAR TAREFAS A-Z
-btn_listar.addEventListener("click", () => {
-    tarefas_armazenadas.sort()
+//* ALTERAR ICONE
+btn_selecionar.addEventListener("click", () => {
+    if(sel_icone.value == "armenian"){
+        lista.classList.toggle("ic1")
+    }else if(sel_icone.value == "circle"){
+        lista.classList.toggle("ic2")
+    }else if(sel_icone.value == "decimal"){
+        lista.classList.toggle("ic3")
+    }else if(sel_icone.value == "decimal-leading-zero"){
+        lista.classList.toggle("ic4")
+    }else if(sel_icone.value == "disc"){
+        lista.classList.toggle("ic5")
+    }else if(sel_icone.value == "georgian"){
+        lista.classList.toggle("ic6")
+    }else if(sel_icone.value == "lower-alpha"){
+        lista.classList.toggle("ic7")
+    }else if(sel_icone.value == "lower-greek"){
+        lista.classList.toggle("ic8")
+    }else if(sel_icone.value == "lower-latin"){
+        lista.classList.toggle("ic9")
+    }else if(sel_icone.value == "lower-roman"){
+        lista.classList.toggle("ic10")
+    }else if(sel_icone.value == "square"){
+        lista.classList.toggle("ic11")
+    }else if(sel_icone.value == "upper-alpha"){
+        lista.classList.toggle("ic12")
+    }else if(sel_icone.value == "upper-latin"){
+        lista.classList.toggle("ic13")
+    }else if(sel_icone.value == "upper-roman"){
+        lista.classList.toggle("ic14")
+    }else{
+        alert("Selecione um tipo de icone")
+    }
 })
-
 
 //* ALTERAR O TEMA
 btn_tema.addEventListener("click", () => {
@@ -102,13 +131,4 @@ btn_tema.addEventListener("click", () => {
     for (btn of lista_btn) {
         btn.classList.toggle("botoes-escuro")
     }
-
-})
-
-//* ALTERAR ICONE
-//! REVISÃO: Descobrir uma forma de alterar mais de uma classe por evento (cada classe em um clique)
-btn_icone.addEventListener("click", () => {
-    tarefas_armazenadas.map((tarefas) => {
-        tarefas.classList.toggle("icone6")
-    })
 })
