@@ -1,21 +1,14 @@
 //* VARIAVEIS UTILIZADAS
 let tela_principal = document.getElementById("principal")
 let tela_tarefa = document.querySelector(".tela-tarefa")
-let lista = document.getElementById("lista")
 let lista_btn = [...document.getElementsByClassName("botoes")]
 let lista_icones = [...document.getElementsByClassName("icones")]
-let campo_add = document.getElementById("campo-add")
 let tarefas_armazenadas = [...document.getElementsByClassName("tarefas")]
-let tema_lista = document.getElementById("tela-escuro")
-let btn_adicionar = document.getElementById("btn-add")
-let btn_deletar = document.getElementById("btn-del")
-let btn_tema = document.getElementById("btn-tema")
-let btn_alterar = document.getElementById("btn-alt")
-let btn_selecionar = document.getElementById("btn-sel")
-let sel_icone = document.getElementById("lst-icone")
+
 
 
 //* ADICIONAR TAREFAS
+let btn_adicionar = document.getElementById("btn-add")
 btn_adicionar.addEventListener("click", () => {
     const novo_elemento = document.createElement("li")
     novo_elemento.setAttribute("class", "tarefas")
@@ -28,7 +21,24 @@ btn_adicionar.addEventListener("click", () => {
     }
 })
 
+let campo_add = document.getElementById("campo-add")
+campo_add.addEventListener("keydown", (adicionar) => {
+    if (adicionar.key == "Enter") {
+        const novo_elemento = document.createElement("li")
+        novo_elemento.setAttribute("class", "tarefas")
+        novo_elemento.innerHTML = campo_add.value
+        adicionar.preventDefault()
+        if (campo_add.value == "") {
+            alert("O campo não pode ficar vazio!")
+        } else {
+            tarefas_armazenadas.push(novo_elemento)
+            lista.appendChild(novo_elemento)
+        }
+    }
+})
+
 //* ALTERAR TAREFA
+let btn_alterar = document.getElementById("btn-alt")
 btn_alterar.addEventListener("click", () => {
     let alt_tarefa = ""
     let sel_tarefa = [...document.getElementsByClassName("tar-sel")]
@@ -63,6 +73,7 @@ btn_alterar.addEventListener("click", () => {
 
 
 //* DELETAR TAREFA
+let lista = document.getElementById("lista")
 lista.addEventListener("click", () => {
     tarefas_armazenadas.map((tarefa) => {
         tarefa.addEventListener("click", () => {
@@ -70,6 +81,7 @@ lista.addEventListener("click", () => {
         })
     })
 })
+let btn_deletar = document.getElementById("btn-del")
 btn_deletar.addEventListener("click", () => {
     let del_tarefa = [...document.getElementsByClassName("tar-sel")]
     if (del_tarefa.length == 0) {
@@ -89,41 +101,48 @@ btn_deletar.addEventListener("click", () => {
 })
 
 //* ALTERAR ICONE
+let btn_selecionar = document.getElementById("btn-sel")
+let sel_icone = document.getElementById("lst-icone")
 btn_selecionar.addEventListener("click", () => {
-    if(sel_icone.value == "armenian"){
+    if (sel_icone.value == "armenian") {
         lista.classList.toggle("ic1")
-    }else if(sel_icone.value == "circle"){
+    } else if (sel_icone.value == "circle") {
         lista.classList.toggle("ic2")
-    }else if(sel_icone.value == "decimal"){
+    } else if (sel_icone.value == "decimal") {
         lista.classList.toggle("ic3")
-    }else if(sel_icone.value == "decimal-leading-zero"){
+    } else if (sel_icone.value == "decimal-leading-zero") {
         lista.classList.toggle("ic4")
-    }else if(sel_icone.value == "disc"){
+    } else if (sel_icone.value == "disc") {
         lista.classList.toggle("ic5")
-    }else if(sel_icone.value == "georgian"){
+    } else if (sel_icone.value == "georgian") {
         lista.classList.toggle("ic6")
-    }else if(sel_icone.value == "lower-alpha"){
+    } else if (sel_icone.value == "lower-alpha") {
         lista.classList.toggle("ic7")
-    }else if(sel_icone.value == "lower-greek"){
+    } else if (sel_icone.value == "lower-greek") {
         lista.classList.toggle("ic8")
-    }else if(sel_icone.value == "lower-latin"){
+    } else if (sel_icone.value == "lower-latin") {
         lista.classList.toggle("ic9")
-    }else if(sel_icone.value == "lower-roman"){
+    } else if (sel_icone.value == "lower-roman") {
         lista.classList.toggle("ic10")
-    }else if(sel_icone.value == "square"){
+    } else if (sel_icone.value == "square") {
         lista.classList.toggle("ic11")
-    }else if(sel_icone.value == "upper-alpha"){
+    } else if (sel_icone.value == "upper-alpha") {
         lista.classList.toggle("ic12")
-    }else if(sel_icone.value == "upper-latin"){
+    } else if (sel_icone.value == "upper-latin") {
         lista.classList.toggle("ic13")
-    }else if(sel_icone.value == "upper-roman"){
+    } else if (sel_icone.value == "upper-roman") {
         lista.classList.toggle("ic14")
-    }else{
+    } else {
         alert("Selecione um tipo de icone")
     }
+
+    console.log("Icone do tipo: " + sel_icone.value)
 })
 
+
 //* ALTERAR O TEMA
+let btn_tema = document.getElementById("btn-tema")
+let tema_lista = document.getElementById("tela-escuro")
 btn_tema.addEventListener("click", () => {
     tela_principal.classList.toggle("tema-escuro")
     tema_lista.classList.toggle("tela-escuro")
