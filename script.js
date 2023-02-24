@@ -33,6 +33,7 @@ campo_add.addEventListener("keydown", (adicionar) => {
         } else {
             tarefas_armazenadas.push(novo_elemento)
             lista.appendChild(novo_elemento)
+            campo_add.value = ""
         }
     }
 })
