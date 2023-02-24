@@ -1,4 +1,4 @@
-//* VARIAVEIS UTILIZADAS
+//* VARIAVEIS UTILIZADAS FORA DE UM ESCOPO
 let tela_principal = document.getElementById("principal")
 let tela_tarefa = document.querySelector(".tela-tarefa")
 let lista_btn = [...document.getElementsByClassName("botoes")]
